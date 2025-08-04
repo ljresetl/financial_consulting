@@ -83,20 +83,23 @@ a:active {
   background-color: #238636;
 }
 
+section {
+  padding: 20px 0px;
+}
+
 @media only screen and (min-width: 768px) {
   button {
     max-width: 179px;
     padding: 16px 40px;
   }
-}
 
-.section {
-  background-color: #0d1117;
-  padding: 40px 0px;
+  section {
+    padding: 40px 0px;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
-  .section {
+  section {
     padding: 75px 0;
   }
 
