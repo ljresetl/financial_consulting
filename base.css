@@ -19,12 +19,12 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  color: #c9d1d9;
+  color: #333;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.4;
-  background-color: #0d1117;
+  background-color: #f8f8f8;
 }
 
 h1,
@@ -72,8 +72,8 @@ button:hover {
 
 a {
   background-color: rgba(255, 255, 255, 0.1); /* Напівпрозорий сірий */
-  color: #c9d1d9;
-  border: 1px solid #30363d;
+
+  padding: 4px 10px;
 }
 
 a:hover {
@@ -82,108 +82,6 @@ a:hover {
 a:active {
   background-color: #238636;
 }
-
-/* === СВІТЛА ТЕМА === */
-body.light-theme {
-  background-color: #f5f5f5;
-  color: #1c1c1c;
-}
-
-/* Світла тема для desktop поля */
-body.light-theme .searchInput-deskopt {
-  background-color: #f2f2f2;
-  color: #1a1a1a;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 8px 12px;
-  font-size: 16px;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-body.light-theme .searchInput-deskopt::placeholder {
-  color: #888;
-}
-
-/* Світла тема для мобільного поля */
-body.light-theme input.searchInput {
-  background-color: #f2f2f2 !important;
-  color: #1a1a1a !important;
-  border: 1px solid #ccc !important;
-  border-radius: 6px !important;
-  padding: 8px 12px !important;
-  font-size: 16px !important;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-body.light-theme input.searchInput::placeholder {
-  color: #888 !important;
-}
-
-body.light-theme .container {
-  background-color: #ffffff;
-}
-
-body.light-theme section {
-  background-color: #f5f5f5;
-}
-
-body.light-theme button {
-  background-color: #2f81f7;
-  color: white;
-}
-
-body.light-theme button:hover {
-  background-color: #1e6cd9;
-}
-
-body.light-theme a {
-  background-color: rgba(0, 0, 0, 0.05);
-  color: #1c1c1c;
-}
-
-body.light-theme a:hover {
-  background-color: #1e6cd9;
-  color: #ffffff;
-}
-/* Світла тема для модального вікна */
-/* 🌞 Світла тема для вікна */
-body.light-theme .modal-window {
-  background-color: #ffffff;
-  color: #1a1a1a;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-}
-
-/* 🌞 Інпут у світлій темі */
-body.light-theme .modal-window input {
-  background-color: #f2f2f2;
-  color: #1a1a1a;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 8px 10px;
-  width: 100%;
-  font-size: 15px;
-  transition: background-color 0.3s, border-color 0.3s;
-}
-
-body.light-theme .modal-window input::placeholder {
-  color: #888;
-}
-
-/* Світла тема для модального вікна - кінець */
-/* Світла тема модального меню фільтрів - початок */
-/* 🌞 Світла тема */
-body.light-theme .filter-modal {
-  background: rgba(255, 255, 255, 0.6); /* Світла підложка */
-  color: #000;
-}
-
-body.light-theme .filter-modal-content {
-  background-color: #fff;
-  color: #000;
-}
-/* Світла тема модального меню фільтрів - кінець */
-/* === СВІТЛА ТЕМА - кінець === */
 
 @media only screen and (min-width: 768px) {
   button {
@@ -194,10 +92,26 @@ body.light-theme .filter-modal-content {
 
 .section {
   background-color: #0d1117;
-  padding: 40px 0;
+  padding: 40px 0px;
 }
-@media only screen and (min-width: 768px) {
+
+@media only screen and (min-width: 1280px) {
   .section {
     padding: 75px 0;
+  }
+
+  .hero-container {
+    /* background: #2e2f42; */
+    padding-top: 188px;
+    padding-bottom: 188px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/people-office\ 1158\(1x\).jpg');
+    max-width: 1440px;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
   }
 }

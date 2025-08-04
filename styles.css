@@ -10,11 +10,13 @@
 @import url('./container.css');
 
 /* Sections style */
+@import url('./cookie-popup');
 @import url('./header.css');
-@import url('./search-bar-nav.css');
-@import url('./movies-list.css');
-@import url('./filters.css');
-@import url('./movies.css');
-@import url('./block-new.css');
-@import url('./opis-kino-ua.css');
+@import url('./hero.css');
+
+@import url('./advantages.css');
+@import url('./blog.css');
+@import url('./contact-form.css');
+@import url('./location.css');
+@import url('./faq.css');
 @import url('./footer.css');

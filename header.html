@@ -1,46 +1,16 @@
 <header class="header">
   <div class="container header-container">
-    <a class="logo" href="index.html">🎬 <span>KINO-UA</span></a>
-
-    <div class="search-bar-deskopt">
-      <input
-        type="text"
-        class="searchInput-deskopt"
-        id="searchInput"
-        placeholder="Пошук по сайту..."
-      />
-      <button class="search-btn-deskopt">🔍 Пошук</button>
-      <button class="theme-toggle-deskopt" aria-label="Переключити тему">
-        🌙
-      </button>
-    </div>
-
-    <div class="header-icons-deskopt">
-      <button class="icon-btn icon-btn-reg-deskopt" id="open-modal-btn">
-        Реєстрація/Вхід
-      </button>
-
-      <!-- 🪟 Модальне вікно -->
-      <div class="modal-overlay hidden" id="modal">
-        <div class="modal-window">
-          <button class="modal-close" id="close-modal-btn">&times;</button>
-          <h2 class="modal-window-h">Реєстрація / Вхід</h2>
-          <form class="modal-window-form">
-            <label class="modal-window-label">
-              Email:
-              <input type="email" required />
-            </label>
-            <label class="modal-window-label">
-              Пароль:
-              <input type="password" required />
-            </label>
-            <button type="submit" class="modal-window-btn">Увійти</button>
-          </form>
-        </div>
-      </div>
-      <!-- 🪟 Модальне вікно - кінець -->
-      <!-- <button class="icon-btn icon-btn-vhid-deskopt">Вхід</button> -->
-      <button class="icon-btn nav-toggle-btn-deskopt">☰</button>
-    </div>
+    <svg class="button-close" width="8" height="8">
+      <use href="./images/icons.svg#icon-close"></use>
+    </svg>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#blog" class="nav-menu-a">Blog</a></li>
+        <li><a href="#contact" class="nav-menu-a">Contacts</a></li>
+        <li><a href="#faq" class="nav-menu-a">FAQ</a></li>
+        <li><a href="#about" class="nav-menu-a">About Us</a></li>
+        <li><a href="#search" class="nav-menu-a">Search</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
