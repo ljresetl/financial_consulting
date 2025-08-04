@@ -1,14 +1,14 @@
  // ✅ Список секцій для підвантаження
   const sectionsToLoad = [
-    ['cookie-popup', './cookie-popup.html'],
-    ['header', './header.html'],
-    ['hero', './hero.html'],
-    ['advantages', './advantages.html'],
-    ['blog', './blog.html'],
-    ['contact-form', './contact-form.html'],
-    ['location', './location.html'],
-    ['faq', './faq.html'],
-    ['footer', './footer.html'],
+    ['cookie-popup', './html/cookie-popup.html'],
+    ['header', './html/header.html'],
+    ['hero', './html/hero.html'],
+    ['advantages', './html/advantages.html'],
+    ['blog', './html/blog.html'],
+    ['contact-form', './html/contact-form.html'],
+    ['location', './html/location.html'],
+    ['faq', './html/faq.html'],
+    ['footer', './html/footer.html'],
   ];
 
   $(document).ready(function () {

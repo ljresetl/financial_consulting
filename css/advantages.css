@@ -4,3 +4,9 @@
   gap: 10px;
   min-width: 50%;
 }
+
+.advantages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

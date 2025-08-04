@@ -1,0 +1,39 @@
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  display: none;
+}
+
+.nav-menu-a {
+  font-weight: 500;
+}
+
+.burger-menu {
+  padding: 20px 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  button {
+    max-width: 179px;
+    padding: 16px 40px;
+  }
+
+  section {
+    padding: 40px 0px;
+  }
+
+  .nav-menu {
+    display: inline-block;
+    display: flex;
+    padding: 20px 0px;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+}

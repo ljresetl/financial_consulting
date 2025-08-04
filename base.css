@@ -55,6 +55,7 @@ a,
 button {
   cursor: url('/img/cursor.svg'), pointer;
   white-space: nowrap;
+  padding: 0px;
 }
 
 button {
@@ -63,11 +64,12 @@ button {
   cursor: pointer;
   max-width: 141px;
   padding: 14px 32px;
-  background-color: #238636;
+  background-color: #f6f8f6;
+  border: none;
 }
 
 button:hover {
-  background-color: #2ea043;
+  background-color: #c0dec6;
 }
 
 a {
@@ -101,20 +103,5 @@ section {
 @media only screen and (min-width: 1280px) {
   section {
     padding: 75px 0;
-  }
-
-  .hero-container {
-    /* background: #2e2f42; */
-    padding-top: 188px;
-    padding-bottom: 188px;
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url('../images/people-office\ 1158\(1x\).jpg');
-    max-width: 1440px;
-    margin: 0 auto;
-    background-size: cover;
-    background-position: center;
   }
 }
