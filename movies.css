@@ -1,0 +1,229 @@
+.container-movie-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.movies-list-movie-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* легка тінь */
+}
+
+/* Блок рейтингу початок */
+
+.rating-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 8px 12px;
+  width: 70px;
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.rating-number {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffd700; /* золотий */
+}
+
+.rating-stars {
+  font-size: 16px;
+  color: #ffd700;
+  line-height: 1;
+}
+
+.rating-source {
+  font-size: 12px;
+  color: #ccc;
+}
+
+/* Блок рейтингу кінець */
+
+.movie-poster {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.no-movies-msg {
+  margin-top: 0px !important;
+  margin: 0 auto;
+}
+
+.movie-poster-img {
+  border-radius: 6px;
+  width: 100%;
+  /* height: auto; */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn-online {
+  width: 370px;
+  max-width: 100%;
+  /* background-color: #709447; */
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 20px;
+}
+
+.text-rating {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+.movie-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pagination {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.load-more {
+  /* background-color: #b2ff59; */
+  color: #000;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  margin: 0 auto;
+  max-width: 50%;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 3px;
+}
+
+.page {
+  /* background-color: #444; */
+  color: #fff;
+  padding: 6px 6px;
+  margin: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  .container-movie-list {
+    gap: 50px;
+  }
+
+  .movies-list-movie-card {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    gap: 30px;
+  }
+
+  /* .movies-list-movie-card {
+    padding: 20px;
+  } */
+
+  .movie-top-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+
+  .movie-poster {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  .movie-poster-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .text-rating {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  .movie-meta {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 48px;
+  }
+
+  .btn-online {
+    width: 800px;
+    max-width: 100%;
+    margin: 0px;
+  }
+
+  .movie-meta {
+    justify-content: end;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .movie-poster-img {
+    width: 100%;
+    height: 500px; /* фіксована висота */
+  }
+}
+
+.responsive-video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto; /* по центру */
+}
+
+.responsive-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Додатково: обмеження максимальної ширини для великих екранів */
+/* Для мобільних (маленькі екрани) */
+@media (max-width: 767px) {
+  .responsive-video-wrapper {
+    max-width: 100%;
+  }
+
+  /* Для планшетів (середні екрани) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .responsive-video-wrapper {
+      max-width: 600px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .responsive-video-wrapper {
+      max-width: 900px; /* наприклад, максимум 900px */
+    }
+  }
+}

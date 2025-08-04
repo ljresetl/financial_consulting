@@ -1,0 +1,79 @@
+.search-bar-nav {
+  padding: 10px 0px;
+}
+
+.container-movies {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Спочатку приховуємо всі картки */
+.movie-card {
+  display: none;
+}
+
+/* Мобільна версія: показуємо лише перші 3 */
+.movie-card[data-index='1'],
+.movie-card[data-index='2'],
+.movie-card[data-index='3'] {
+  display: block;
+}
+
+.movie-card {
+  width: 33%;
+  text-align: center;
+  align-items: center;
+}
+
+.movies-img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Для списку фільмів — обрізаємо опис */
+.movie-description .full-desc {
+  display: none;
+}
+/* Показуємо */
+.movie-description .short-desc {
+  display: inline;
+}
+
+@media only screen and (min-width: 768px) {
+  .movie-card[data-index='4'] {
+    display: block;
+  }
+
+  .container-movies {
+    gap: 20px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container-movies {
+    padding: 70px;
+    border-radius: 6px;
+    justify-content: space-between;
+  }
+
+  .movie-card {
+    width: 181px;
+    height: 274px;
+  }
+  .movie-card[data-index='5'] {
+    display: block;
+  }
+
+  .movies-img {
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: rgb(160, 208, 170);
+    border-radius: 6px;
+  }
+
+  body.light-theme .movies-img {
+    background-color: #e6e6e6;
+  }
+}
