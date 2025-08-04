@@ -1,0 +1,28 @@
+.footer-a {
+  padding: 0px;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px 0px;
+}
+
+.footer-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-ul {
+    flex-direction: row;
+    gap: 30px;
+  }
+}

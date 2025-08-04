@@ -14,3 +14,12 @@
   flex-direction: column;
   gap: 10px;
 }
+
+@media only screen and (min-width: 768px) {
+  .blog-ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 24px;
+  }
+}

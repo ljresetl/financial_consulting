@@ -1,0 +1,17 @@
+.location-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.location-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
