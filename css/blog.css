@@ -1,0 +1,16 @@
+.blog-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.blog-li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
