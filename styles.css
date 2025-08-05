@@ -380,7 +380,7 @@ section {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('../img/people-office-1158(1x).jpg');
+      url('./img/people-office-1158\(1x\).jpg');
     max-width: 1440px;
     margin: 0 auto;
     background-size: cover;
@@ -396,7 +396,7 @@ section {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('../img/people-office-1158(2x).jpg');
+      url('./img/people-office-1158\(2x\).jpg');
   }
 }
 
