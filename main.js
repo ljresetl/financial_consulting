@@ -1,102 +1,58 @@
-const sectionsToLoad = [
-  // ['cookie-popup', './html/cookie-popup.html'],
-  ['header', './html/header.html'],
-  ['hero', './html/hero.html'],
-  ['advantages', './html/advantages.html'],
-  ['blog', './html/blog.html'],
-  ['contact-form', './html/contact-form.html'],
-  ['location', './html/location.html'],
-  ['faq', './html/faq.html'],
-  ['footer', './html/footer.html'],
-];
-
-$(function () {
-  sectionsToLoad.forEach(([id, path]) => {
-    let element = $('#' + id);
-
-    if (!element.length) {
-      console.warn(`⚠️ Element #${id} not found. Creating placeholder.`);
-      element = $(`<div id="${id}"></div>`).appendTo('main');
-    }
-
-    element.load(path, function (response, status, xhr) {
-      if (status === "error") {
-        console.error(`❌ Failed to load '${path}':`, xhr.status, xhr.statusText);
-      } else {
-        console.log(`✅ Loaded '${path}' into #${id}`);
-
-        // Після завантаження header ініціалізуємо мобільне меню
-        if (id === 'header') {
-          // Додані логи для налагодження:
-          const burgerBtn = document.querySelector('.burger-menu');
-          const mobileMenu = document.querySelector('.mobile-menu');
-          const closeBtn = document.querySelector('.mobile-menu-close');
-
-          console.log('burgerBtn:', burgerBtn);
-          console.log('mobileMenu:', mobileMenu);
-          console.log('closeBtn:', closeBtn);
-
-          initMobileMenu();
-        }
-
-        if (id === 'contact-form') {
-          initPhoneFlag();
-        }
-      }
-    });
-  });
+document.addEventListener("DOMContentLoaded", function () {
+  initMobileMenu();
+  initPhoneFlag();
 });
 
-let mobileMenuInitialized = false;
-
-// Функція ініціалізації мобільного меню
+// === Мобільне меню ===
 function initMobileMenu() {
-  if (mobileMenuInitialized) return; // Запобігаємо повторній ініціалізації
-  mobileMenuInitialized = true;
-
   const burgerBtn = document.querySelector('.burger-menu');
   const mobileMenu = document.querySelector('.mobile-menu');
   const closeBtn = document.querySelector('.mobile-menu-close');
+  const menuLinks = mobileMenu?.querySelectorAll('a'); // Додаємо вибір посилань
 
   if (!burgerBtn || !mobileMenu || !closeBtn) {
-    console.warn('Mobile menu elements not found');
+    console.warn('⚠️ Mobile menu elements not found');
     return;
   }
 
-  console.log('Mobile menu initialized');
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    mobileMenu.setAttribute('hidden', '');
+  }
 
   burgerBtn.addEventListener('click', () => {
-    console.log('Burger clicked');
+    mobileMenu.removeAttribute('hidden');
     mobileMenu.classList.add('open');
     mobileMenu.setAttribute('aria-hidden', 'false');
   });
 
-  closeBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    mobileMenu.setAttribute('aria-hidden', 'true');
-  });
+  closeBtn.addEventListener('click', closeMenu);
 
   document.addEventListener('click', (e) => {
     if (!mobileMenu.classList.contains('open')) return;
-
-    if (
-      !mobileMenu.contains(e.target) &&
-      !burgerBtn.contains(e.target)
-    ) {
-      mobileMenu.classList.remove('open');
-      mobileMenu.setAttribute('aria-hidden', 'true');
+    if (!mobileMenu.contains(e.target) && !burgerBtn.contains(e.target)) {
+      closeMenu();
     }
   });
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
-      mobileMenu.classList.remove('open');
-      mobileMenu.setAttribute('aria-hidden', 'true');
+      closeMenu();
     }
   });
+
+  // === Закривати меню при кліку по пункту
+  if (menuLinks?.length) {
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        closeMenu();
+      });
+    });
+  }
 }
 
-// Функція ініціалізації прапорця для телефону
+// === Вибір прапора за телефонним кодом ===
 function initPhoneFlag() {
   const phoneInput = document.querySelector("#phone");
   const flagDisplay = document.getElementById("flag-display");
@@ -115,7 +71,7 @@ function initPhoneFlag() {
 
   function getFlagByPhone(phone) {
     if (!phone.startsWith('+')) return null;
-    phoneCodeFlags.sort((a,b) => b.code.length - a.code.length);
+    phoneCodeFlags.sort((a, b) => b.code.length - a.code.length);
     for (const entry of phoneCodeFlags) {
       if (phone.startsWith(entry.code)) return entry;
     }

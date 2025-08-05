@@ -27,23 +27,307 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <!-- Header -->
-    <div id="header"></div>
+    <!-- хеадер початок -->
+    <header class="headere">
+      <div class="container header-container">
+        <svg
+          class="icon-business-svgrepo-com"
+          width="24"
+          height="24"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <use href="./img/icons.svg#icon-business-svgrepo-com"></use>
+        </svg>
 
-    <!-- Main Content -->
-    <main>
-      <!-- <div id="cookie-popup"></div> -->
-      <div id="hero"></div>
-      <div id="advantages"></div>
-      <div id="blog"></div>
-      <div id="contact-form"></div>
-      <div id="location"></div>
-      <div id="faq"></div>
-    </main>
+        <nav>
+          <ul class="nav-menu">
+            <li class="nav-menu-li">
+              <a href="#blog" class="nav-menu-a">Blog</a>
+            </li>
+            <li class="nav-menu-li">
+              <a href="#contact" class="nav-menu-a">Contacts</a>
+            </li>
+            <li class="nav-menu-li">
+              <a href="#faq" class="nav-menu-a">FAQ</a>
+            </li>
+            <li class="nav-menu-li">
+              <a href="#about" class="nav-menu-a">About Us</a>
+            </li>
+            <li class="nav-menu-li">
+              <a href="#search" class="nav-menu-a">Search</a>
+            </li>
+          </ul>
+        </nav>
 
-    <!-- Footer -->
-    <div id="footer"></div>
+        <button class="burger-menu" type="button" aria-label="Open menu">
+          <svg
+            class="burger-menu-icon"
+            width="24"
+            height="24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <use href="./img/icons.svg#burger-menu"></use>
+          </svg>
+        </button>
 
+        <div class="mobile-menu" aria-hidden="true" hidden>
+          <button
+            class="mobile-menu-close"
+            type="button"
+            aria-label="Close menu"
+          >
+            <svg
+              class="close-icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <use href="./img/icons.svg#close"></use>
+            </svg>
+          </button>
+          <nav>
+            <ul class="mobile-menu-list">
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#contact">Contacts</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#search">Search</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- хеадер кінець -->
+
+    <!-- херо початок -->
+    <header class="hero">
+      <div class="container hero-container">
+        <h1 class="hero-h">Your Financial Freedom Starts Here</h1>
+
+        <p class="hero-p">
+          Expert consulting services tailored for UK businesses and individuals.
+        </p>
+      </div>
+    </header>
+
+    <!-- херо кінець -->
+
+    <!-- адвантагес початок -->
+    <section class="advantages" id="about">
+      <div
+        class="container advantages-container"
+        style="display: flex; align-items: center; gap: 40px"
+      >
+        <div class="advantages-text">
+          <h2 class="advantages-text-h">Why Choose Right Life Co?</h2>
+          <ul class="advantages-list">
+            <li class="advantage">✔ 10+ Years of Experience</li>
+            <li class="advantage">✔ Certified Financial Advisors</li>
+            <li class="advantage">✔ Personalised Support</li>
+            <li class="advantage">✔ Transparent Pricing</li>
+          </ul>
+        </div>
+        <div class="advantages-image">
+          <img
+            src="./img/advantages320(1x).jpg"
+            alt="Financial consulting"
+            class="advantagesimg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- адвантагес кінець -->
+
+    <!-- блог початок -->
+    <section class="blog" id="blog">
+      <div class="container blog-container">
+        <ul class="blog-ul">
+          <li class="blog-li">
+            <h3 class="blog-h">Smart Investments</h3>
+            <p class="blog-p">
+              Learn how to grow your wealth through diversified and well-planned
+              investment strategies tailored for the UK market.
+            </p>
+          </li>
+          <li class="blog-li">
+            <h3 class="blog-h">Tax Optimisation</h3>
+            <p class="blog-p">
+              Discover efficient methods to reduce your tax burden legally and
+              boost your net returns with expert advice.
+            </p>
+          </li>
+          <li class="blog-li">
+            <h3 class="blog-h">Retirement Planning</h3>
+            <p class="blog-p">
+              Plan ahead for a secure and comfortable retirement with pension
+              schemes and long-term financial goals.
+            </p>
+          </li>
+          <li class="blog-li">
+            <h3 class="blog-h">Mortgage Advice</h3>
+            <p class="blog-p">
+              Navigate the UK housing market confidently with tailored mortgage
+              solutions and lending strategies.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- блог кінець -->
+
+    <!-- контакт початок -->
+    <section class="contact-form" id="contact">
+      <div class="container contact-form-container two-columns">
+        <div class="contact-image">
+          <img
+            src="./img/forma-zviazku320.jpg"
+            alt="Contact illustration"
+            width="370"
+            height="308"
+            class="contact-image-img"
+          />
+        </div>
+
+        <div class="modal-contact-form">
+          <div class="modal">
+            <p class="modal-title">
+              Leave your contacts and we will call you back
+            </p>
+
+            <form class="modal-form" action="thank-you.html" method="GET">
+              <label class="modal-label" for="user-name">Name</label>
+              <input
+                type="text"
+                name="user-name"
+                id="user-name"
+                class="modal-input"
+              />
+
+              <label class="modal-label" for="phone">Phone</label>
+              <div style="position: relative">
+                <!-- Контейнер для прапорця -->
+                <div
+                  id="flag-display"
+                  style="
+                    position: absolute;
+                    left: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 20px;
+                    height: 15px;
+                  "
+                ></div>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="modal-input"
+                  style="padding-left: 40px"
+                />
+              </div>
+
+              <label class="modal-label" for="Email">Email</label>
+              <input type="email" name="Email" id="Email" class="modal-input" />
+
+              <button type="submit" class="modal-button">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- контакт кінець -->
+
+    <!-- локатіон початок -->
+    <section class="location">
+      <div class="container location-container">
+        <h2 class="location-title">Our Office Location</h2>
+        <p class="location-description">
+          Visit our office at the heart of London. We welcome consultations by
+          appointment.
+        </p>
+        <div class="map-container" style="position: relative; cursor: pointer">
+          <a
+            href="https://www.google.com/maps/place/London/"
+            target="_blank"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: 2;
+            "
+          ></a>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19868.661185663086!2d-0.1277585!3d51.5073509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3332a78c79%3A0x9f8be1b4d9472761!2sLondon!5e0!3m2!1sen!2suk!4v1691200000000!5m2!1sen!2suk"
+            width="100%"
+            height="400"
+            style="border: 0; pointer-events: none"
+          >
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" ></iframe
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- локатіон кінець -->
+
+    <!-- фак початок -->
+    <section class="faq" id="faq">
+      <div class="container faq-container">
+        <h2 class="faq-h">FAQ</h2>
+        <details class="faq-details">
+          <summary class="faq-summary">What services do you provide?</summary>
+          <p class="faq-p">
+            We offer financial planning, investment advice, tax consulting, and
+            more.
+          </p>
+        </details>
+        <details class="faq-details">
+          <summary class="faq-summary">
+            Do you serve individuals or businesses?
+          </summary>
+          <p class="faq-p">Both. We tailor our services based on your needs.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- фак кінець -->
+
+    <!-- футер початок -->
+    <footer class="footer">
+      <div class="container container-footer">
+        <svg class="icon-business-svgrepo-com" width="24" height="24">
+          <use
+            href="./img/icons.svg#icon-business-svgrepo-com"
+            width="24px"
+            height="24px"
+          ></use>
+        </svg>
+        <ul class="footer-ul">
+          <li class="footer-li">
+            <a href="#" class="footer-a">Privacy Policy</a>
+          </li>
+          <li class="footer-li">
+            <a href="#" class="footer-a">Terms of Use</a>
+          </li>
+          <li class="footer-li">
+            <a href="tel:+441234567890" class="footer-a">+44 1234 567 890</a>
+          </li>
+        </ul>
+        <p>© 2025 Right Life Co. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- футер кінець -->
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
