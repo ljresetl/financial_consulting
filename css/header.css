@@ -17,6 +17,64 @@
   padding: 20px 0px;
 }
 
+/* мобільне меню початок */
+/* Приховуємо меню за замовчуванням */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  padding: 1.5rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 9999;
+  overflow-y: auto;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Коли меню активне - показуємо */
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+/* Кнопка закриття */
+.mobile-menu-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 3rem 0 0 0;
+  margin: 0;
+}
+
+.nav-menu-li {
+  margin-bottom: 1.25rem;
+}
+
+.nav-menu-a {
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #222;
+  transition: color 0.2s ease;
+}
+
+.nav-menu-a:hover,
+.nav-menu-a:focus {
+  color: #007bff;
+}
+
+/* мобільне меню кінець */
+
 @media only screen and (min-width: 768px) {
   button {
     max-width: 179px;
