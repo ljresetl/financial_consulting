@@ -1,3 +1,56 @@
 <section class="contact-form" id="contact">
-  <div class="container contact-form-container"></div>
+  <div class="container contact-form-container two-columns">
+    <div class="contact-image">
+      <img
+        src="../img/forma-zviazku320.jpg"
+        alt="Contact illustration"
+        width="370"
+        class="contact-image-img"
+      />
+    </div>
+
+    <div class="modal-contact-form">
+      <div class="modal">
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+
+        <form class="modal-form" action="thank-you.html" method="GET">
+          <label class="modal-label" for="user-name">Name</label>
+          <input
+            type="text"
+            name="user-name"
+            id="user-name"
+            class="modal-input"
+          />
+
+          <label class="modal-label" for="phone">Phone</label>
+          <div style="position: relative">
+            <!-- Контейнер для прапорця -->
+            <div
+              id="flag-display"
+              style="
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 15px;
+              "
+            ></div>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="modal-input"
+              style="padding-left: 40px"
+            />
+          </div>
+
+          <label class="modal-label" for="Email">Email</label>
+          <input type="email" name="Email" id="Email" class="modal-input" />
+
+          <button type="submit" class="modal-button">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>

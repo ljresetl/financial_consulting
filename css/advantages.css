@@ -10,3 +10,27 @@
   flex-direction: column;
   gap: 10px;
 }
+
+.advantagesimg {
+  border-radius: 6px;
+}
+
+@media only screen and (min-width: 768px) {
+  .advantages-text {
+    gap: 30px;
+  }
+
+  .advantages-list {
+    gap: 20px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .advantages-text {
+    gap: 60px;
+  }
+
+  .advantages-list {
+    gap: 40px;
+  }
+}
