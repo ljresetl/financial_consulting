@@ -346,7 +346,7 @@ section {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('./img/tablet-Dark-bg(1x).jpg');
+      url('./img/tablet-Dark-bg\(1x\).jpg');
     max-width: 768px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -362,7 +362,7 @@ section {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('./img/tablet-Dark-bg(2x).jpg');
+      url('./img/tablet-Dark-bg\(2x\).jpg');
   }
 }
 
@@ -380,7 +380,7 @@ section {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('./img/people-office-1158(1x).jpg');
+      url('../img/people-office-1158(1x).jpg');
     max-width: 1440px;
     margin: 0 auto;
     background-size: cover;
@@ -396,7 +396,7 @@ section {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('./img/people-office-1158(2x).jpg');
+      url('../img/people-office-1158(2x).jpg');
   }
 }
 
